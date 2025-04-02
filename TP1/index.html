@@ -47,16 +47,16 @@
 
             </div>
             <div class="image4">
-                
+
             </div>
             <div class="image5">
-                
+
             </div>
             <div class="image6">
-                
+
             </div>
             <div class="image7">
-                
+
             </div>
 
         </section>
@@ -71,9 +71,27 @@
             <input type="email" id="email" placeholder="testemail@test.com" minlength="3" maxlength="10" required><br>
 
             <label for="telefono">Telefono:</label>
-            <input type="tel" id="telefono" placeholder="291-111111" pattern="[0-9]{1,4}-[0-9]{6}" required>
+            <input type="tel" id="telefono" placeholder="291-111111" pattern="[0-9]{1,4}-[0-9]{6}" required><br>
 
-    </main>
+            <label for="comentario">Comentario:</label>
+            <textarea id="comentario" rows="3" cols="25" placeholder="Ingrese un comentaria si lo desea"></textarea><br>
+
+            <label for="carrera">Carrera:</label>
+            <select id="carrera" name="carrera">
+                <option value="carrera1">carrera1</option>
+                <option value="carrera2">carrera2</option>
+                <option value="carrera3">carrera3</option>
+                <option value="carrera4">carrera4</option>
+                <option value="carrera5">carrera5</option>
+            </select><br>
+
+            <label for="hombre">Genero</label>
+            <input type="radio" id="hombre" value="hombre:" name="genero" required>
+            <label for="mujer">Female</label>
+            <input type="radio" id="mujer" value="mujer:" name="genero" required>
+            <label for="otro">Otro</label>
+            <input type="radio" id="otro" value="otro:" name="gender" required>
+
 
     </main>
 
