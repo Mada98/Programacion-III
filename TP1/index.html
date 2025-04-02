@@ -6,25 +6,109 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE-edge">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
 <body>
 
     <header>
-        <h2>Hola k ase</h2>
+        <nav>
+            <ul>
+                <li><a href="Inicio">Inicio</a></li>
+                <li><a href="cards">cards</a></li>
+                <li><a href="Formulario">Formulario</a></li>
+            </ul>
+            <a href="https://github.com/Mada98/Programación-III" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        </nav>
     </header>
 
 
     <main>
+        <section class="cards">
+            <div class="card1">
+                <img src="https://acentocoop.es/wp-content/uploads/2021/03/redactor-freelance-1024x682.jpg"
+                    alt="Redactores Freelance">
+                <h2>Redactores Freelance</h2>
+                <p>La creación de contenidos está más solicitado que nunca. Todos los medios digitales,
+                    pequeños empresarios, revistas, e incluso grandes medios,
+                    demandan profesionales freelance para el mejor contenido de la web y generar más visitas.
+                </p>
+            </div>
+            <div class="card2">
+
+            </div>
+            <div class="card3">
+
+            </div>
+            <div class="card4">
+
+            </div>
+            <div class="card5">
+
+            </div>
+            <div class="card6">
+
+            </div>
+        </section>
+        <section class="images">
+            <div class="image1">
+
+            </div>
+            <div class="image2">
+
+            </div>
+            <div class="image3">
+
+            </div>
+            <div class="image4">
+
+            </div>
+            <div class="image5">
+
+            </div>
+            <div class="image6">
+
+            </div>
+            <div class="image7">
+
+            </div>
+
+        </section>
+
 
         <h2 class="TituloSecundario"> Formulario</h2>
         <div class="formulario">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" placeholder="Nombre" minlength="3" maxlength="10" required><br>
 
+            <label for="email">Email:</label>
+            <input type="email" id="email" placeholder="testemail@test.com" minlength="3" maxlength="10" required><br>
 
-        </div>
+            <label for="telefono">Telefono:</label>
+            <input type="tel" id="telefono" placeholder="291-111111" pattern="[0-9]{1,4}-[0-9]{6}" required><br>
+
+            <label for="comentario">Comentario:</label>
+            <textarea id="comentario" rows="3" cols="25" placeholder="Ingrese un comentaria si lo desea"></textarea><br>
+
+            <label for="carrera">Carrera:</label>
+            <select id="carrera" name="carrera">
+                <option value="carrera1">carrera1</option>
+                <option value="carrera2">carrera2</option>
+                <option value="carrera3">carrera3</option>
+                <option value="carrera4">carrera4</option>
+                <option value="carrera5">carrera5</option>
+            </select><br>
+
+            <label for="hombre">Genero</label>
+            <input type="radio" id="hombre" value="hombre:" name="genero" required>
+            <label for="mujer">Female</label>
+            <input type="radio" id="mujer" value="mujer:" name="genero" required>
+            <label for="otro">Otro</label>
+            <input type="radio" id="otro" value="otro:" name="gender" required>
+
 
     </main>
-
 
     <footer>
 
