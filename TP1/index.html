@@ -7,6 +7,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE-edge">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <script>
+        function validarFormulario(event) {
+            const nombre = document.getElementById('nombre').value;
+            const email = document.getElementById('email').value;
+            const telefono = document.getElementById('telefono').value;
+            const comentario = document.getElementById('comentario').value;
+            const carrera = document.getElementById('carrera').value;
+            const genero = document.querySelector('input[name="genero"]:checked');
+    
+            // Validación de los campos
+            if (nombre === '' || email === '' || telefono === '' || carrera === '' || genero === null) {
+                alert('Por favor, complete todos los campos obligatorios.');
+                event.preventDefault();
+            } else {
+                alert('Formulario enviado correctamente.');
+            }
+        }
+    </script>
 </head>
 
 <body>
@@ -126,37 +145,38 @@
 
 
         <h2 class="TituloSecundario"> Formulario</h2>
-        <div class="formulario">
-            <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre" placeholder="Nombre" minlength="3" maxlength="10" required><br>
+        <form>
+            <div class="formulario">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" placeholder="Nombre" minlength="3" maxlength="10" required><br>
 
-            <label for="email">Email:</label>
-            <input type="email" id="email" placeholder="testemail@test.com" minlength="3" maxlength="10" required><br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" placeholder="testemail@test.com" minlength="3" maxlength="10" required><br>
 
-            <label for="telefono">Telefono:</label>
-            <input type="tel" id="telefono" placeholder="291-111111" pattern="[0-9]{1,4}-[0-9]{6}" required><br>
+                <label for="telefono">Telefono:</label>
+                <input type="tel" id="telefono" placeholder="291-111111" pattern="[0-9]{1,4}-[0-9]{6}" required><br>
 
-            <label for="comentario">Comentario:</label>
-            <textarea id="comentario" rows="3" cols="25" placeholder="Ingrese un comentaria si lo desea"></textarea><br>
+                <label for="comentario">Comentario:</label>
+                <textarea id="comentario" rows="3" cols="25" placeholder="Ingrese un comentaria si lo desea"></textarea><br>
 
-            <label for="carrera">Carrera:</label>
-            <select id="carrera" name="carrera">
-                <option value="carrera1">carrera1</option>
-                <option value="carrera2">carrera2</option>
-                <option value="carrera3">carrera3</option>
-                <option value="carrera4">carrera4</option>
-                <option value="carrera5">carrera5</option>
-            </select><br>
+                <label for="carrera">Carrera:</label>
+                <select id="carrera" name="carrera">
+                    <option value="carrera1">carrera1</option>
+                    <option value="carrera2">carrera2</option>
+                    <option value="carrera3">carrera3</option>
+                    <option value="carrera4">carrera4</option>
+                    <option value="carrera5">carrera5</option>
+                </select><br>
 
-            <label for="hombre">Genero</label>
-            <input type="radio" id="hombre" value="hombre:" name="genero" required>
-            <label for="mujer">Female</label>
-            <input type="radio" id="mujer" value="mujer:" name="genero" required>
-            <label for="otro">Otro</label>
-            <input type="radio" id="otro" value="otro:" name="gender" required>
-            <button type="submit">Enviar</button>
-            <button type="reset">Limpiar</button>
-
+                <label for="hombre">Genero</label>
+                <input type="radio" id="hombre" value="hombre:" name="genero" required>
+                <label for="mujer">Female</label>
+                <input type="radio" id="mujer" value="mujer:" name="genero" required>
+                <label for="otro">Otro</label>
+                <input type="radio" id="otro" value="otro:" name="gender" required>
+                <button type="submit">Enviar</button>
+                <button type="reset">Limpiar</button>
+            </form>
 
     </main>
 
