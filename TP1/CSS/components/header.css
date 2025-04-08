@@ -1,0 +1,53 @@
+@font-face {
+    font-family: "Titulo prueba";
+    src: url(../../Fonts/DM_Serif_Text/DMSerifText-Regular.ttf)
+}
+
+
+.nav-contenedor {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: whitesmoke;
+    box-shadow: 0 2px 4px black;
+}
+
+
+.titulo h1 {
+    font-family: "Titulo prueba";
+    margin: 0;
+    font-size: 1.5rem;
+    color: #034994;
+}
+
+.nav-menu ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-menu a:hover {
+    color: #007bff;
+}
+
+/* Links a redes */
+.links a {
+    margin-left: 1rem;
+    font-size: 1.5rem;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.links a:hover {
+    color: #007bff;
+}
