@@ -1,1 +1,8 @@
 @import url('components/header.css');
+
+.cards img{
+    width: 40%;
+}
+.images img{
+    width: 20%;
+}
