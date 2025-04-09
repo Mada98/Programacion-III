@@ -1,0 +1,26 @@
+.card-contenedor img {
+    width: 50%;
+}
+.card-contenedor {
+    display: flex;
+    flex-direction:unset;
+}
+.card{
+    width: 20%;
+    display: flex;
+    box-shadow: 0 2px 4px black;;
+    margin: 10px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+}
+.card button{
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
