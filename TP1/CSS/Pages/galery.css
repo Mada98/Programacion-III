@@ -1,0 +1,17 @@
+.image-container img{
+    width: 700px;
+    height: 400px;
+    box-shadow: 0 2px 4px black;
+}
+main h1{
+    display: flex;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: #034994;
+}
+.image-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding: 10px;
+}
