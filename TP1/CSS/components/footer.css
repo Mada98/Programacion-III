@@ -1,0 +1,13 @@
+@font-face {
+    font-family: "Titulo prueba";
+    src: url(../../Fonts/DM_Serif_Text/DMSerifText-Regular.ttf)
+}
+
+.footer-contenedor {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: whitesmoke;
+    box-shadow: 0 2px 4px black;
+}
