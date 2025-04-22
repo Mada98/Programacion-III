@@ -48,6 +48,11 @@ main {
     margin-left: 10px;
 }
 
+.radio {
+    display: flex;
+    gap: 15px
+}
+
 .formulario button {
     margin-top: 20px;
     padding: 10px 20px;

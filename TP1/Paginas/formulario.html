@@ -1,22 +1,24 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../CSS/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
+
 <body>
     <header>
         <nav class="nav-contenedor">
             <div class="titulo">
-                <h1>TITULO DE LA PAGINA</h1>
+                <h1>Formulario</h1>
             </div>
             <div class="nav-menu">
                 <ul>
                     <li><a href="../index.html">Inicio</a></li>
-                    <li><a href="cards.html">cards</a></li>
-                    <li><a href="galery.html">Imagenes</a></li>
+                    <li><a href="cards.html">Cards</a></li>
+                    <li><a href="galery.html">Galeria</a></li>
                     <li><a href="formulario.html">Formulario</a></li>
                 </ul>
             </div>
@@ -27,7 +29,6 @@
         </nav>
     </header>
     <main>
-        <h2 class="TituloSecundario"> Formulario</h2>
         <form>
             <div class="formulario">
                 <label for="nombre">Nombre:</label>
@@ -46,19 +47,23 @@
 
                 <label for="carrera">Carrera:</label>
                 <select id="carrera" name="carrera">
-                    <option value="carrera1">carrera1</option>
-                    <option value="carrera2">carrera2</option>
-                    <option value="carrera3">carrera3</option>
-                    <option value="carrera4">carrera4</option>
-                    <option value="carrera5">carrera5</option>
+                    <option value="carrera1">Redactor Freelancer</option>
+                    <option value="carrera2">Asistente Virtual</option>
+                    <option value="carrera3">Diseñador Web</option>
+                    <option value="carrera4">Search English Optimization</option>
+                    <option value="carrera5">Ingeniero de Software</option>
+                    <option value="carrera6">Experto en redes sociales</option>
                 </select><br>
 
-                <label for="hombre">Hombre</label>
-                <input type="radio" id="hombre" value="hombre:" name="genero" required>
-                <label for="mujer">Mujer</label>
-                <input type="radio" id="mujer" value="mujer:" name="genero" required>
-                <label for="otro">Otro</label>
-                <input type="radio" id="otro" value="otro:" name="genero" required>
+                <label for="genero">Genero:</label>
+                <div class="radio">
+                    <label for="hombre">Hombre</label>
+                    <input type="radio" id="hombre" value="hombre" name="genero" required>
+                    <label for="mujer">Mujer</label>
+                    <input type="radio" id="mujer" value="mujer" name="genero" required>
+                    <label for="otro">Otro</label>
+                    <input type="radio" id="otro" value="otro" name="genero" required>
+                </div>
 
                 <button type="submit">Enviar</button>
                 <button type="reset">Limpiar</button>
@@ -68,4 +73,5 @@
 
     </footer>
 </body>
+
 </html>
