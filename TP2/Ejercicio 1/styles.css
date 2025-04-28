@@ -1,0 +1,16 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    flex-direction: column;
+    background-color: antiquewhite;
+}
+
+.contenedorMayor {
+    background-color: lightgray;
+    padding: 20px;
+    border-radius: 10px;
+}
