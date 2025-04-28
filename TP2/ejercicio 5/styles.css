@@ -1,0 +1,16 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 550px;
+}
+#formulario{
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 2px 4px black;
+    padding: 15px;
+}
+#conteiner-boton{
+    display: flex;
+    justify-content: center;
+}
