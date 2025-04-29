@@ -1,3 +1,20 @@
-.completado{
+.completado {
     background-color: yellow;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    flex-direction: column;
+    background-color: antiquewhite;
+}
+
+.contenedor {
+    background-color: lightgray;
+    padding: 20px;
+    border-radius: 10px;
 }
