@@ -12,19 +12,18 @@ const Turno = sequelize.define('Turno',{
         type: DataTypes.INTEGER,
         allowNull: false
     },
+    //YYYY-MM-DD HH:MM:SS este es el formato para los horarios
     horario:{
-        type: DataTypes.DATE,
+        type: DataTypes.STRING,
         allowNull: false
     }
 })
 
-//cree esta funcion solo para chequear el get y el delete
-//faltaria el jwt, si es q lo vamos a hacer
 Turno.createTurno = async function (id_paciente, horario) {
     try{
         const pacient = await Paciente.findByPk(id_paciente)
         if(!pacient){
-            throw new error('Error: no existe un usuario con este id')
+            throw new Error('Error: no existe un usuario con este id')
         }
         const turn = await Turno.create({id_paciente, horario})
         return turn
@@ -37,7 +36,7 @@ Turno.deleteTurno = async function (id) {
     try{
         const turn = await Turno.findByPk(id)
         if(!turn){
-            throw new error('Error: no existe un usuario con este id')
+            throw new Error('Error: no existe un usuario con este id')
         }
         return await turn.destroy()
     }catch(error){

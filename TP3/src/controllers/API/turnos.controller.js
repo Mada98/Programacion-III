@@ -27,8 +27,8 @@ exports.createTurno = async (req, res) => {
         const turno = await Turno.createTurno(id_paciente, horario)
         res.status(201).json(turno)
     }catch(error){
-        if(error.message === 'Error: no existe un usuario con este id')
-            return res.status(404).json({message: 'no existe un paciente con este id'})
+        if(error.message === 'Error: no existe un paciente con este id')
+            return res.status(404).json({message: error.message})
         res.status(400).json({message: error.message})
     }
 }
@@ -36,10 +36,10 @@ exports.createTurno = async (req, res) => {
 exports.deleteTurno = async (req, res) => {
     try{
         await Turno.deleteTurno(req.params.id)
-        res.status(204).send()
+        res.status(201).json({message: 'Turno eliminado con exito'})
     }catch(error){
-        if(error.message === 'Error: no existe un usuario con este id'){
-            return res.status(404).json({message: 'no existe un paciente con este id'})
+        if(error.message === 'Error: no existe un turno con este id'){
+            return res.status(404).json({message: error.message})
         }
         res.status(500).json({message: error.message})
     }
