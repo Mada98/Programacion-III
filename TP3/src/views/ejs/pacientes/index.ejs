@@ -9,6 +9,21 @@
     <h1>  PACIENTES  </h1>
 
     <div id="contenedorPrincipal">
+        
+        
+        <h2>Lista de pacientes registrados</h2>
+        <contenedorLista>
+            <table>
+                <thread>
+                    <tr>    
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Apellido</th>
+                        <th>Email</th>
+                    </tr>
+                </thread>
+            </table>
+        </contenedorLista>
 
         <h2>Agregar nuevo paciente</h2>
         <form method="POST" action ="/api/v1/pacientes">
@@ -18,6 +33,7 @@
             <input type="password" name="contraseña" placeholder="Contraseña" required>
             <button class="botones" type="submit">Agregar</button>
         </form>
+
 
     </div>
 </body>
