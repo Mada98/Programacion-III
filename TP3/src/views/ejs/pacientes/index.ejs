@@ -7,5 +7,18 @@
 </head>
 <body>
     <h1>  PACIENTES  </h1>
+
+    <div id="contenedorPrincipal">
+
+        <h2>Agregar nuevo paciente</h2>
+        <form method="POST" action ="/api/v1/pacientes">
+            <input type="text" name="nombre" placeholder="Nombre" required>
+            <input type="text" name="apellido" placeholder="Apellido" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="password" name="contraseña" placeholder="Contraseña" required>
+            <button class="botones" type="submit">Agregar</button>
+        </form>
+
+    </div>
 </body>
 </html>
