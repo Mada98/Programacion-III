@@ -1,8 +1,7 @@
 const { Router } = require('express');
+const pacientesController = require('../controllers/API/pacientes.controller')
 const router = Router();
 
-router.get('/', (req, res) => {
-  res.render('pacientes/index'); 
-});
+router.get('/', pacientesController.listPacientesRender);
 
 module.exports = router;

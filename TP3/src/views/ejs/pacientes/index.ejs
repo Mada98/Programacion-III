@@ -1,46 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    <h1>  PACIENTES  </h1>
+    <h1> PACIENTES </h1>
 
     <div id="contenedorPrincipal">
-        
-        
+
+
         <h2>Lista de pacientes registrados</h2>
-        <contenedorLista>
-            <table>
-                <thread>
-                    <tr>    
-                        <th>ID</th>
-                        <th>Nombre</th>
-                        <th>Apellido</th>
-                        <th>Email</th>
-                    </tr>
-                </thread>
-                <tbody>
-                    <% if (pacientes.lenght > 0){ %>
-                        <% pacientes.forEach(paciente => { >%
-                            <tr>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                            </tr>
 
-                        <%})%>
-                    <%}%>
-
-                </tbody>
-            </table>
-        </contenedorLista>
-
+        <ul>
+            <% pacientes.forEach(paciente=> { %>
+                <li>
+                    ID: <%= paciente.id %> | Nombre: <%= paciente.nombre %> | Apellido: <%= paciente.apellido %> | Email: <%= paciente.email %>
+                </li>
+                <% }) %>
+        </ul>
         <h2>Agregar nuevo paciente</h2>
-        <form method="POST" action ="/api/v1/pacientes">
+        <form method="POST" action="/api/v1/pacientes">
             <input type="text" name="nombre" placeholder="Nombre" required>
             <input type="text" name="apellido" placeholder="Apellido" required>
             <input type="email" name="email" placeholder="Email" required>
@@ -51,4 +34,5 @@
 
     </div>
 </body>
+
 </html>

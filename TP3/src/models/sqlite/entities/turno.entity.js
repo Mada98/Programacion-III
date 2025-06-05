@@ -47,8 +47,8 @@ Turno.deleteTurno = async function (id) {
 
 Turno.listTurnos = async function () {
   try{
-    const turnos = await Turno.findAll({attributes: ['id', 'id_paciente', 'horario']})
-    return turnos.map(turn => turn.get({plain:true}))
+    const turnos = await Turno.findAll({attributes: ['id', 'id_paciente', 'horario'], raw: true })
+    return turnos
   }catch(error){
     throw error
   }

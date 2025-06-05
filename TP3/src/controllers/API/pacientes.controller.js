@@ -55,12 +55,10 @@ exports.deletePaciente = async (req, res) => {
     }
 }
 
-exports.listPacientes = async (req, res) => {
+exports.listPacientesRender = async (req, res) => {
     try{
-        console.log('Hola mundo');
-        
         const pacientes = await Paciente.listPacientes()
-        res.status(200).send(pacientes)
+        res.render('pacientes/index', { pacientes })
     }catch(error){
         res.status(500).json({message: 'Error al obtener los datos de los Pacientes'})
     }

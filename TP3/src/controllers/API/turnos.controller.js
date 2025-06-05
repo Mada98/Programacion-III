@@ -46,10 +46,10 @@ exports.deleteTurno = async (req, res) => {
     }
 }
 
-exports.listaDeTurnos = async (req, res) => {
+exports.listaDeTurnosRender = async (req, res) => {
     try{
         const turnos = await Turno.listTurnos()
-        res.status(200).send(turnos)
+        res.render('turnos/index', { turnos })
     }catch(error){
         res.status(500).json({message: 'Error al obtener los datos de los Pacientes'})
     }
