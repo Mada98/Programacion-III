@@ -5,7 +5,15 @@
   <title>Gestion Clinica Salud+</title>
 </head>
 <body>
-  <h1>Bienvenido clinica Salud+</h1>
+  <h3>Bienvenido clinica Salud+</h3>
+
+  <h2>LOGIN</h2>
+  <form method="POST" action="/api/v1/pacientes/login">
+    <input type="email" name="email" placeholder="Email" required>
+    <input type="password" name="contraseña" placeholder="Contraseña" required>
+    <button type="sumit">Ingresar</button>
+  </form>
+
   <nav>
     <ul>
       <li><a href="/pacientes">Pacientes</a></li>
