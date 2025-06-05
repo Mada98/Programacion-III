@@ -1,3 +1,4 @@
+const { Paciente } = require('../../models/sqlite/entities/paciente.entity');
 const { Turno } = require('../../models/sqlite/entities/turno.entity')
 
 exports.getAllTurnos = async (req, res) => {
@@ -42,5 +43,14 @@ exports.deleteTurno = async (req, res) => {
             return res.status(404).json({message: error.message})
         }
         res.status(500).json({message: error.message})
+    }
+}
+
+exports.listaDeTurnos = async (req, res) => {
+    try{
+        const turnos = await Turno.listTurnos()
+        res.status(200).send(turnos)
+    }catch(error){
+        res.status(500).json({message: 'Error al obtener los datos de los Pacientes'})
     }
 }

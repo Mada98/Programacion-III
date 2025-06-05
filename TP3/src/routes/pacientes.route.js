@@ -5,12 +5,12 @@ const { pacienteSchema } = require('../schemas/paciente.schema.js')
 const { validate } = require('../middlewares/validate.js')
 
 const rutaPacientes = Router();
-rutaPacientes.get('/', verifyTokenMiddleware, pacientesController.getAllPacientes);
+rutaPacientes.get('/',  pacientesController.getAllPacientes);
+rutaPacientes.get('/lista', pacientesController.listPacientes)
 rutaPacientes.post('/login', validate(pacienteSchema.login), pacientesController.login);
-rutaPacientes.post('/', verifyTokenMiddleware, validate(pacienteSchema.create), pacientesController.createPaciente);
-rutaPacientes.put('/:id', verifyTokenMiddleware, validate(pacienteSchema.update),pacientesController.updatePaciente);
-rutaPacientes.delete('/:id', verifyTokenMiddleware, pacientesController.deletePaciente);
-
+rutaPacientes.post('/',  validate(pacienteSchema.create), pacientesController.createPaciente);
+rutaPacientes.put('/:id',  validate(pacienteSchema.update),pacientesController.updatePaciente);
+rutaPacientes.delete('/:id',  pacientesController.deletePaciente);
 
 module.exports = rutaPacientes;
 

@@ -97,8 +97,8 @@ Paciente.deletePaciente = async function (id) {
 }
 Paciente.listPacientes = async function () {
   try{
-    const pacients = await Paciente.findAll()
-    return pacients.map(pacient => `${pacient.id},${pacient.nombre},${pacient.apellido},${pacient.email}`)
+    const pacients = await Paciente.findAll({attributes: ['id', 'nombre', 'apellido', 'email']});
+    return pacients.map(pacient => pacient.get({plain:true}))
   }catch(error){
     throw error
   }
