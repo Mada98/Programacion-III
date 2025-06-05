@@ -19,6 +19,10 @@
             <% pacientes.forEach(paciente=> { %>
                 <li>
                     ID: <%= paciente.id %> | Nombre: <%= paciente.nombre %> | Apellido: <%= paciente.apellido %> | Email: <%= paciente.email %>
+
+                    <form action="/api/v1/pacientes/<%= paciente.id %>?_method=DELETE" method="POST" style="display:inline;">
+                    <button type="submit" onclick="return confirm('¿Estas seguro?')">Eliminar</button>
+                    </form>
                 </li>
                 <% }) %>
         </ul>
