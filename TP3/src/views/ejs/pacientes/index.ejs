@@ -12,7 +12,7 @@
 
     <div id="contenedorPrincipal">
 
-        <h2>Agregar nuevo paciente</h2>
+        <h2>Agregar paciente</h2>
         <form method="POST" action="/api/v1/pacientes">
             <input type="text" name="nombre" placeholder="Nombre" required>
             <input type="text" name="apellido" placeholder="Apellido" required>
@@ -24,16 +24,20 @@
         <h2>Lista de pacientes registrados</h2>
 
         <ul>
+
             <% pacientes.forEach(paciente=> { %>
                 <li>
                     ID: <%= paciente.id %> | Nombre: <%= paciente.nombre %> | Apellido: <%= paciente.apellido %> | Email: <%= paciente.email %>
+
                     <form action="/api/v1/pacientes/<%= paciente.id %>?_method=DELETE" method="POST" style="display:inline;">
-                    <button type="submit" onclick="return confirm('¿Estas seguro?')">Eliminar</button>
+                        <button type="submit" onclick="return confirm('¿Estas seguro?')">Eliminar</button>
                     </form>
                 </li>
                 <% }) %>
         </ul>
-    
+
+        <h2>Editar paciente por ID</h2>
+
 
 
     </div>
