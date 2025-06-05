@@ -12,10 +12,9 @@
 
     <h2>Agregar turno</h2>
 
-    <form method="POST" action="/api/v1/turnos">
-        <input type="text" name="id" placeholder="ID Paciente" required>
+    <form method="POST" action="/turnos/post">
+        <input type="text" name="id_paciente" placeholder="ID Paciente" required>
         <input type="text" name="horario" placeholder="YYYY-MM-DD HH:MM:SS" required>
-        <input type="text" name="authorization" placeholder="Token de acceso" required>
         <button class="botones" type="submit">Agregar</button>
     </form>
 
