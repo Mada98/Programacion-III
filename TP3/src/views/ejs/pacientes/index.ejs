@@ -4,11 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="/pacientes-style.css">
+    <title>Pacientes</title>
 </head>
 
 <body>
-    <h1> PACIENTES </h1>
+    <h1> Pacientes </h1>
 
     <div id="contenedorPrincipal">
 
@@ -30,15 +31,11 @@
                     ID: <%= paciente.id %> | Nombre: <%= paciente.nombre %> | Apellido: <%= paciente.apellido %> | Email: <%= paciente.email %>
 
                     <form action="/api/v1/pacientes/<%= paciente.id %>?_method=DELETE" method="POST" style="display:inline;">
-                        <button type="submit" onclick="return confirm('¿Estas seguro?')">Eliminar</button>
+                        <button class="botonEliminar" type="submit" onclick="return confirm('¿Estas seguro?')">Eliminar</button>
                     </form>
                 </li>
                 <% }) %>
         </ul>
-
-        <h2>Editar paciente por ID</h2>
-
-
 
     </div>
 </body>

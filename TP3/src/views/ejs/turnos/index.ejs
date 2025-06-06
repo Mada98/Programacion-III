@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/turnos-style.css">
     <title>Document</title>
 </head>
 
@@ -30,6 +31,14 @@
             </li>
         <% }) %>
     </ul>
+
+    <h2>Buscar turnos por ID de paciente</h2>
+    <form method="GET" action="/api/v1/turnos/id">
+        <input type="text" name="id_paciente" placeholder="ID del paciente" required>
+        <button type="submit">Buscar</button>
+    </form>
+
+
 </body>
 
 </html>

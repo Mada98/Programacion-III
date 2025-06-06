@@ -45,6 +45,7 @@ class Server {
     this.app.use(express.urlencoded({ extended: true }))
     this.app.use(express.json())
     this.app.use(morgan('dev'))
+    this.app.use(express.static('public'));
   }
 
   rutas () {
@@ -53,6 +54,7 @@ class Server {
     this.app.use('/', home)
     this.app.use('/turnos', rutaTurnosWeb)
     this.app.use('/pacientes', rutaPacientesWeb);
+
     
  
     // aca van las otras rutas
