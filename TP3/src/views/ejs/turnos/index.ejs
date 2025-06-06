@@ -33,7 +33,7 @@
     </ul>
 
     <h2>Buscar turnos por ID de paciente</h2>
-    <form method="GET" action="/api/v1/turnos/id">
+    <form method="GET" onsubmit="event.preventDefault(); window.location.href = '/api/v1/turnos/' + this.elements['id_paciente'].value;">
         <input type="text" name="id_paciente" placeholder="ID del paciente" required>
         <button type="submit">Buscar</button>
     </form>
