@@ -1,5 +1,5 @@
-# 🏥 Trabajo Práctico 3  
-## Desarrollo de Aplicación de Turnos Médicos Programación 3
+# 🏥 Trabajo Práctico 3 - Programación 3
+## Desarrollo de Aplicación de Turnos Médicos
 
 ---
 
@@ -52,7 +52,7 @@ Ejecutar el siguiente comando:
 ```bash
 npm run dev
 ```
-### Integrantes del grupo:
+## 👥 Integrantes del grupo:
 + Mateo Avila Baez
 + Ramiro Gabeiras
 + Juan Braun
