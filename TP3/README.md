@@ -1,6 +1,5 @@
 # 🏥 Trabajo Práctico 3  
-## Desarrollo de Aplicación de Turnos Médicos  
-**Programación 3**
+## Desarrollo de Aplicación de Turnos Médicos Programación 3
 
 ---
 
