@@ -36,7 +36,7 @@ Turno.deleteTurno = async function (id) {
     try{
         const turn = await Turno.findByPk(id)
         if(!turn){
-            throw new Error('Error: no existe un usuario con este id')
+            throw new Error('Error: no existe un turno con este id')
         }
         return await turn.destroy()
     }catch(error){
