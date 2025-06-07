@@ -1,40 +1,54 @@
-# Trabajo Practico 3 - Desarrollo de Aplicación de Turnos Médicos - Programacion 3
+# 🏥 Trabajo Práctico 3  
+## Desarrollo de Aplicación de Turnos Médicos  
+**Programación 3**
 
-## Informacion necesaria:
+---
 
-### Endpoints para el Backend:
+## 📋 Información necesaria
 
-Pacientes:
-> /api/v1/pacientes
+### 🔗 Endpoints para el Backend
 
-Turnos:
-> /api/v1/turnos
+- **Pacientes:**  
+  `/api/v1/pacientes`
 
-### Endpoints para el Frontend:
+- **Turnos:**  
+  `/api/v1/turnos`
 
-Menu:
-> /
+### 🌐 Endpoints para el Frontend
 
-Menu Pacientes:
-> /pacientes
+- **Menú Principal:**  
+  `/`
 
-Menu Turnos:
-> /turnos
+- **Menú Pacientes:**  
+  `/pacientes`
 
-### Pasos para instalar el proyecto:
-1. Clonar el repositorio actual
-2. Abrir el repositorio clonado recientemente en el Visual Studio
-3. Abrir la consola y ejecutar los siguientes comandos
-```bash
-npm i
-npm i express
+- **Menú Turnos:**  
+  `/turnos`
 
-### Para inicializar el proyecto ejecutamos este comando:
+---
+
+## ⚙️ Pasos para instalar el proyecto
+
+1. Clonar el repositorio actual:
+
+    ```bash
+    git clone <URL-DEL-REPOSITORIO>
+    ```
+
+2. Abrir el repositorio clonado recientemente en **Visual Studio Code**.
+
+3. Abrir la terminal y ejecutar los siguientes comandos para instalar las dependencias:
+
+    ```bash
+    npm i
+    npm i express
+    ```
+
+---
+
+## 🚀 Para inicializar el proyecto
+
+Ejecutar el siguiente comando:
+
 ```bash
 npm run dev
-
-### Integrantes del grupo:
-+ Mateo Avila Baez
-+ Ramiro Gabeiras
-+ Juan Braun
-+ Franco Wilberger
