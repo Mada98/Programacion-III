@@ -36,7 +36,7 @@
 
 2. Abrir el repositorio clonado recientemente en **Visual Studio Code**.
 
-3. Abrir la terminal y ejecutar los siguientes comandos para instalar las dependencias:
+3. Abrir la terminal y ejecutar los siguientes comandos:
 
     ```bash
     npm i
