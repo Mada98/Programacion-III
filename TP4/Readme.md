@@ -4,7 +4,7 @@
 
 ## 📋 Informacion necesaria
 
-### ⚙️ Pasos para inicializar el TP4
+### ⚙️ Pasos para la instalacion del TP4
 
 1. Clonar el repositorio actual.
 
@@ -19,7 +19,7 @@
     ```bash
     cd Backend
     ```
-5. Ejecutar el siguiente comando.
+5. Ejecutar el siguiente comando para descargar los paquetes necesarios para inicializarlo.
     ```bash
     npm i
     ```
@@ -27,12 +27,24 @@
     ```bash
     cd frontend-app
     ```
-7. Ejecutar el siguiente comando.
+7. Ejecutar el siguiente comando para descargar los paquetes necesarios para inicializarlo.
     ```bash
     npm i
     ```
-8. Y al ejecutar el comando anterior se nos abriria la pagina automaticamente con la informacion de las personas.
 
+### ⚙️ Inicializar el proyecto
+
+1.  En una terminal entrar en la carpeta del Backend e inicializarlo
+    ```bash
+    cd Backend
+    npm run dev
+    ```
+2. Abrir otra terminal y entrar en la carpeta del Frontend e inicializarlo
+    ```bash
+    cd frontend-app
+    npm start
+    ```
+3. Al inicializar el frontend (Paso anterior) se nos abrira automaticamente la pagina con el contenido
 ---
 
 ### 👥 Integrantes
