@@ -8,44 +8,51 @@ function TraerPersonas() {
 
   useEffect(() => {
     async function fetchUsuarios() {
-      try{
+      try {
         setLoading(true)
         const personaData = await fetch('http://localhost:3001/personas')
 
-        if (!personaData){
+        if (!personaData) {
           throw new Error('Error al obtener los usuarios')
         }
         const data = await personaData.json()
         setPersonas(data)
-      }catch (error){
+      } catch (error) {
         setError(error.message)
-      }finally{
+      } finally {
         setLoading(false)
       }
     }
     fetchUsuarios()
   }, [])
 
-  return {personas, loading, error}
+  return { personas, loading, error }
 }
-function ListaTarjetas() {
-const {personas, loading, error} = TraerPersonas()
 
-  if (loading){
+function ListaTarjetas() {
+  const { personas, loading, error } = TraerPersonas()
+
+  if (loading) {
     return <h2>Cargando personas...</h2>
   }
-  if (error){
+  if (error) {
     return <h2>Error al obtener los datos de las personas: {error}</h2>
   }
-  return(
+  return (
     <div>
       <h2>Lista de Personas</h2>
       <ul>
         {personas.map(persona => (
-          <li key={persona.id}>Nombre: {persona.nombre} | Apellido: {persona.apellido} | Edad: {persona.edad} | Email: {persona.email}</li>
+          tarjetaPersona(persona.nombre, persona.apellido, persona.edad, persona.email)
         ))}
       </ul>
     </div>
+  )
+}
+
+function tarjetaPersona(nombre, apellido, edad, email) {
+  return (
+    <li>Nombre: {nombre} | Apellido: {apellido} | Edad: {edad} | Email: {email}</li>
   )
 }
 
