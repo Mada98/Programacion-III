@@ -39,20 +39,20 @@ function ListaTarjetas() {
     return <h2>Error al obtener los datos de las personas: {error}</h2>
   }
   return (
-    <div>
+    <>
       <h2>Lista de Personas</h2>
       <ul>
         {personas.map(persona => (
-          tarjetaPersona(persona.nombre, persona.apellido, persona.edad, persona.email)
+          tarjetaPersona(persona.id, persona.nombre, persona.apellido, persona.edad, persona.email)
         ))}
       </ul>
-    </div>
+    </>
   )
 }
 
-function tarjetaPersona(nombre, apellido, edad, email) {
+function tarjetaPersona(id , nombre, apellido, edad, email) {
   return (
-    <li>Nombre: {nombre} | Apellido: {apellido} | Edad: {edad} | Email: {email}</li>
+    <li>ID: {id} | Nombre: {nombre} | Apellido: {apellido} | Edad: {edad} | Email: {email}</li>
   )
 }
 
