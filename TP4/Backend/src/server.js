@@ -3,6 +3,7 @@ const dotenv = require('dotenv');
 
 const rutaPersonas = require('./routes/personas.route.js')
 const morgan = require('morgan');
+const cors = require('cors')
 const methodOverride = require('method-override');
 
 dotenv.config()
@@ -34,6 +35,9 @@ class Server {
     this.app.use(express.json())
     this.app.use(morgan('dev'))
     this.app.use(express.static('public'));
+    this.app.use(cors({
+      origin: 'http://localhost:3000'
+    }))
   }
 
   rutas() {

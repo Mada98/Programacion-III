@@ -4,6 +4,6 @@ const personasController = require('../controllers/API/personas.controller.js');
 const rutaPersonas = Router();
 
 rutaPersonas.get('/', personasController.listaPersona);
-rutaPersonas.post('/', personasController.createPersona);
+rutaPersonas.post('/post', personasController.createPersona);
 
 module.exports = rutaPersonas;
