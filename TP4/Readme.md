@@ -32,7 +32,7 @@
     npm i
     ```
 
-### ⚙️ Inicializar el proyecto
+### 🚀 Inicializar el proyecto
 
 1.  En una terminal entrar en la carpeta del Backend e inicializarlo.
     ```bash
