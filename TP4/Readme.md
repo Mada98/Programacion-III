@@ -34,17 +34,17 @@
 
 ### ⚙️ Inicializar el proyecto
 
-1.  En una terminal entrar en la carpeta del Backend e inicializarlo
+1.  En una terminal entrar en la carpeta del Backend e inicializarlo.
     ```bash
     cd Backend
     npm run dev
     ```
-2. Abrir otra terminal y entrar en la carpeta del Frontend e inicializarlo
+2. Abrir otra terminal y entrar en la carpeta del Frontend e inicializarlo.
     ```bash
     cd frontend-app
     npm start
     ```
-3. Al inicializar el frontend (Paso anterior) se nos abrira automaticamente la pagina con el contenido
+3. Al inicializar el frontend (Paso anterior) se nos abrira automaticamente la pagina con el contenido.
 ---
 
 ### 👥 Integrantes
