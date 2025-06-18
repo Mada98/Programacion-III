@@ -26,10 +26,50 @@ async function agregarLibro (nuevoLibro){
         }
 }
 
-function editarLibro (){
-    
+async function editarLibro (id, datosActualizados) {
+    try {
+        setLoading(true);
+        const respuesta = await fetch(`http://localhost:3001/libros/${id}`, {
+            method: 'PUT',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(datosActualizados),
+        });
+
+        if (!respuesta.ok) {
+            throw new Error('Error al editar el libro');
+        }
+
+        const libroEditado = await respuesta.json();
+
+        setLibros(prev =>
+            prev.map(libro => libro.id === id ? libroEditado : libro)
+        );
+
+        return libroEditado;
+    } catch (error) {
+        setError(error.message);
+    } finally {
+        setLoading(false);
+    }
 }
 
-function eliminarLibro(){
+async function eliminarLibro(id) {
+    try {
+        setLoading(true);
+        const respuesta = await fetch(`http://localhost:3001/libros/${id}`, {
+            method: 'DELETE',
+        });
 
+        if (!respuesta.ok) {
+            throw new Error('Error al eliminar el libro');
+        }
+
+        setLibros(prev => prev.filter(libro => libro.id !== id));
+
+        return true;
+    } catch (error) {
+        setError(error.message);
+    } finally {
+        setLoading(false);
+    }
 }
