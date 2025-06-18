@@ -47,4 +47,27 @@ Libro.createLibro = async function (nombre, autor, genero, estado, rating) {
   }
 }
 
+Libro.updateLibro = async function (id, nombre, autor, genero, estado, rating) {
+  try {
+    const libro = await Libro.findByPk(id)
+    if (!libro) {
+      throw new Error('Error: no existe un libro con este id')
+    }
+    return await libro.update({ nombre, autor, genero, estado, rating })
+  } catch (error) {
+    throw error;
+  }
+}
+
+Libro.deleteLibro = async function (id) {
+  try {
+    const libro = await Libro.findByPk(id)
+    if (!libro) {
+      throw new Error('Error: no existe un libro con este id')
+    }
+    return await libro.destroy()
+  } catch (error) {
+    throw error
+  }
+}
 module.exports = { Libro }

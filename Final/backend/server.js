@@ -5,7 +5,8 @@ const morgan = require('morgan');
 require('dotenv').config();
 
 const { sequelize } = require('./models/sqlite/config/db');
-const routes = require('./routes/libros.route');
+const routeLibro = require('./routes/libros.route');
+const routeResena = require('./routes/resena.route');
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -29,7 +30,8 @@ if (process.env.NODE_ENV !== 'test') {
 }
 
 // Rutas
-app.use('/api', routes);
+app.use('/api', routeLibro);
+app.use('/api', routeResena);
 
 // Health check en la raíz
 app.get('/health', (req, res) => {

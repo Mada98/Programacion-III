@@ -3,7 +3,9 @@ const librosController = require('../controllers/API/libros.controller.js');
 
 const rutaLibros = Router();
 
-rutaLibros.get('/', librosController.listaLibros);
-rutaLibros.post('/post', librosController.createLibro);
+rutaLibros.get('/libros', librosController.listaLibros);
+rutaLibros.post('/libros', librosController.createLibro);
+rutaLibros.put('/libros/:id', librosController.updateLibro);
+rutaLibros.delete('/libros/:id', librosController.deleteLibro);
 
 module.exports = rutaLibros;
