@@ -12,7 +12,7 @@ function Header(){
         <header>
             
             <h1>Libreria</h1>
-            <button onClick>Agregar Libro</button>
+            <button onClick={agregarClick}>Agregar Libro</button>
 
             <h3>Filtrar libros por:</h3>
             <select defaultValue='todos'>

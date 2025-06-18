@@ -73,3 +73,8 @@ async function eliminarLibro(id) {
         setLoading(false);
     }
 }
+
+
+
+export default {agregarLibro, editarLibro, eliminarLibro}
+
