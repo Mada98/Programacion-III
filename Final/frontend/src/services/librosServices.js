@@ -56,6 +56,18 @@ export async function eliminarLibro(id) {
 }
 
 
+export async function editarLibro(id, datosActualizados) {
+  const respuesta = await fetch(`http://localhost:3001/api/libro/${id}`, {
+    method: 'PUT',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(datosActualizados),
+  });
 
-export default {agregarLibro, editarLibro, eliminarLibro}
+  if (!respuesta.ok) {
+    throw new Error('Error al editar el libro');
+  }
+
+  return await respuesta.json();
+}
+
 
