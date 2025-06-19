@@ -5,7 +5,7 @@ function FormularioAgregarLibro ({crear, cerrar}) {
     const [autor, agregarAutor] = useState("");
     const [genero, agregarGenero] = useState("");
     const [estado, agregarEstado] = useState("");
-    const [raiting, agregarRaiting] = useState(1);
+    const [rating, agregarRating] = useState(1);
     const [review, agregarReview] = useState("");
 
     const generos = ["ficcion", "misterio", "romance", "ciencia-ficcion", "fantasia", "terror", "aventura", "historico", "biografia", "filosofia"];
@@ -15,7 +15,7 @@ function FormularioAgregarLibro ({crear, cerrar}) {
     const handleSubmit = (evento) => {
     evento.preventDefault();
 
-    const nuevoLibro = { titulo, autor, genero, estado, raiting, review };
+    const nuevoLibro = { titulo, autor, genero, estado, rating, review };
     crear(nuevoLibro);
     cerrar();
   };
@@ -48,8 +48,8 @@ function FormularioAgregarLibro ({crear, cerrar}) {
                         ))}
                     </select>
 
-                    <label htmlFor="raiting">Raiting:</label>
-                    <input type="number" id="raiting" min="1" max="5" value={raiting} onChange={(evento) => agregarRaiting(evento.target.value)} required />
+                    <label htmlFor="rating">Rating:</label>
+                    <input type="number" id="rating" min="1" max="5" value={rating} onChange={(evento) => agregarRating(Number(evento.target.value))} required />
 
                     <label htmlFor="review">Review:</label>
                     <textarea id="review" value={review} onChange={(evento) => agregarReview(evento.target.value)}></textarea>
@@ -61,3 +61,5 @@ function FormularioAgregarLibro ({crear, cerrar}) {
         </div>
     )
 };
+
+export default FormularioAgregarLibro

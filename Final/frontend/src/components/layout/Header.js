@@ -7,12 +7,12 @@
 
 //FUTURO SI ESTAMOS BIEN DE TIEMPO: FILTRAR POR A-Z, PUNTUACION.
 
-function Header(){
+function Header({onAgregarClick}){
     return(
         <header>
             
             <h1>Libreria</h1>
-            <button onClick={agregarClick}>Agregar Libro</button>
+            <button onClick={onAgregarClick}>Agregar Libro</button>
 
             <h3>Filtrar libros por:</h3>
             <select defaultValue='todos'>
