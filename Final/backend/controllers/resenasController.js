@@ -47,8 +47,53 @@ const createResena = async (req, res) => {
   }
 };
 
+const updateResena = async (req, res) => {
+  try {
+    const { id } = req.params;
+    const { id_libro, resena } = req.body;
+    
+    const libro = await Libros.findByPk(id_libro);
+    if (!libro) {
+      return res.status(404).json({ error: 'libro not found' });
+    }
+    const resenaOld = await Resenas.findByPk(id)
+    if (!resenaOld) {
+      return res.status(404).json({ error: 'reseña not found' });
+    }
+    const updatedResena = await resenaOld.update({
+      id_libro,
+      resena
+    });
+    
+    res.json({
+      message: 'Reseña updated successfully',
+      task: updatedResena
+    });
+  } catch (error) {
+    res.status(400).json({ error: 'Error updating Reseña', message: error.message });
+  }
+};
+
+const deleteResena = async (req, res) => {
+  try {
+    const { id } = req.params;
+    const resena = await Resenas.findByPk(id);
+    
+    if (!resena) {
+      return res.status(404).json({ error: 'Reseña not found' });
+    }
+    
+    await resena.destroy();
+    res.json({ message: 'Reseña deleted successfully' });
+  } catch (error) {
+    res.status(500).json({ error: 'Error deleting Reseña', message: error.message });
+  }
+};
+
 module.exports = { 
     getAllResenas,
     getResenaById,
-    createResena 
+    createResena,
+    updateResena,
+    deleteResena 
 }
