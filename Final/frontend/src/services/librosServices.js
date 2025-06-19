@@ -15,7 +15,7 @@ export async function agregarLibro(nuevoLibro) {
 }
 
 
-
+/*
 async function editarLibro (id, datosActualizados) {
     try {
         setLoading(true);
@@ -43,25 +43,16 @@ async function editarLibro (id, datosActualizados) {
     }
 }
 
-async function eliminarLibro(id) {
-    try {
-        setLoading(true);
-        const respuesta = await fetch(`http://localhost:3001/libros/${id}`, {
-            method: 'DELETE',
-        });
+*/
 
-        if (!respuesta.ok) {
-            throw new Error('Error al eliminar el libro');
-        }
+export async function eliminarLibro(id) {
+  const respuesta = await fetch(`http://localhost:3001/api/${id}`, {
+    method: 'DELETE',
+  });
 
-        setLibros(prev => prev.filter(libro => libro.id !== id));
-
-        return true;
-    } catch (error) {
-        setError(error.message);
-    } finally {
-        setLoading(false);
-    }
+  if (!respuesta.ok) {
+    throw new Error('No se pudo eliminar el libro');
+  }
 }
 
 
