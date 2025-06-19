@@ -1,7 +1,7 @@
 
 
 export async function agregarLibro(nuevoLibro) {
-  const respuesta = await fetch("http://localhost:3001/libros", {
+  const respuesta = await fetch("http://localhost:3001/api/libro", {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(nuevoLibro),

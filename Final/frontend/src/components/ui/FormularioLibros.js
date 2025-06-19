@@ -1,12 +1,11 @@
 import { useState } from "react";
 
 function FormularioAgregarLibro ({crear, cerrar}) {
-    const [titulo, agregarTitulo] = useState("");
+    const [nombre, agregarTitulo] = useState("");
     const [autor, agregarAutor] = useState("");
     const [genero, agregarGenero] = useState("");
     const [estado, agregarEstado] = useState("");
     const [rating, agregarRating] = useState(1);
-    const [review, agregarReview] = useState("");
 
     const generos = ["ficcion", "misterio", "romance", "ciencia-ficcion", "fantasia", "terror", "aventura", "historico", "biografia", "filosofia"];
 
@@ -15,7 +14,7 @@ function FormularioAgregarLibro ({crear, cerrar}) {
     const handleSubmit = (evento) => {
     evento.preventDefault();
 
-    const nuevoLibro = { titulo, autor, genero, estado, rating, review };
+    const nuevoLibro = { nombre, autor, genero, estado, rating};
     crear(nuevoLibro);
     cerrar();
   };
@@ -26,8 +25,8 @@ function FormularioAgregarLibro ({crear, cerrar}) {
                 <h2>Agregar Libro</h2>
 
                 <form onSubmit={handleSubmit}>
-                    <label htmlFor="titulo">Título:</label>
-                    <input type="text" id="titulo" value={titulo} onChange={(evento) => agregarTitulo(evento.target.value)} required />
+                    <label htmlFor="nombre">Título:</label>
+                    <input type="text" id="nombre" value={nombre} onChange={(evento) => agregarTitulo(evento.target.value)} required />
 
                     <label htmlFor="autor">Autor:</label>
                     <input type="text" id="autor" value={autor} onChange={(evento) => agregarAutor(evento.target.value)} required />
@@ -50,9 +49,6 @@ function FormularioAgregarLibro ({crear, cerrar}) {
 
                     <label htmlFor="rating">Rating:</label>
                     <input type="number" id="rating" min="1" max="5" value={rating} onChange={(evento) => agregarRating(Number(evento.target.value))} required />
-
-                    <label htmlFor="review">Review:</label>
-                    <textarea id="review" value={review} onChange={(evento) => agregarReview(evento.target.value)}></textarea>
 
                     <button type="submit">Agregar Libro</button>
                     <button type="button" onClick={cerrar}>Cerrar</button>
