@@ -4,6 +4,7 @@ function TarjetasLibros({ libro, onEliminar }) {
     return (
         <div className="tarjeta-libro">
             <h3>{libro.nombre}</h3>
+            <p>ID: {libro.id}</p>
             <p>Autor: {libro.autor}</p>
             <p>Genero: {libro.genero}</p>
             <p>Estado: {libro.estado}</p>

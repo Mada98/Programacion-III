@@ -10,10 +10,16 @@ function App() {
   const [mostrarFormulario, setMostrarFormulario] = useState(false);
   const [libros, setLibros] = useState([]);
 
+  useEffect(() => {
+    fetch("http://localhost:3001/api/libro")
+      .then(res => res.json())
+      .then(data => setLibros(data || []))
+      .catch(err => console.error('Error al cargar tareas:', err));
+  }, []);
+
   const crearLibro = async (nuevoLibro) => {
     try {
-      const libroCreado = await agregarLibro(nuevoLibro);
-      setLibros(prev => [...prev, libroCreado]);
+      await agregarLibro(nuevoLibro);
       setMostrarFormulario(false);
     } catch (error) {
       console.error("Error al agregar el libro:", error);
@@ -23,7 +29,6 @@ function App() {
   const eliminarLibroPorId = async (id) => {
     try {
       await eliminarLibro(id);
-      setLibros(prevLibros => prevLibros.filter(libro => libro.id !== id));
     } catch (error) {
       alert("Error al eliminar libro: " + error.message);
     }
