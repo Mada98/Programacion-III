@@ -46,7 +46,7 @@ async function editarLibro (id, datosActualizados) {
 */
 
 export async function eliminarLibro(id) {
-  const respuesta = await fetch(`http://localhost:3001/api/${id}`, {
+  const respuesta = await fetch(`http://localhost:3001/api/libro/${id}`, {
     method: 'DELETE',
   });
 
