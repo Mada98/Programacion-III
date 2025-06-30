@@ -1,12 +1,13 @@
 
 import './Header.css';
 
-function Header({onAgregarClick}){
+function Header({onAgregarLibroClick, onAgregarResenaClick}){
     return(
         <header>
             
             <h1>Libreria</h1>
-            <button onClick={onAgregarClick}>Agregar Libro</button>
+            <button onClick={onAgregarLibroClick}>Agregar Libro</button>
+            <button onClick={onAgregarResenaClick}>Realizar Reseña</button>
 
             <h3>Filtrar libros por:</h3>
             <select defaultValue='todos'>
