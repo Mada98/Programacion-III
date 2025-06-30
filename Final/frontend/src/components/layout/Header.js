@@ -1,11 +1,5 @@
 
-// Agregar path de las funcion onClick de agregar Libro 
-
-//Agregar seleccion de opcion y llamada a la funcion de filtrado
-
-//ELegir generos especificos y agregar seleccion de opcion y llamada a la funcion de filtrado
-
-//FUTURO SI ESTAMOS BIEN DE TIEMPO: FILTRAR POR A-Z, PUNTUACION.
+import './Header.css';
 
 function Header({onAgregarClick}){
     return(

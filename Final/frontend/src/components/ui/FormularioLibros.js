@@ -1,4 +1,5 @@
 import { useState } from "react";
+import './FormularioLibros.css';
 
 function FormularioAgregarLibro ({crear, cerrar}) {
     const [nombre, agregarTitulo] = useState("");
