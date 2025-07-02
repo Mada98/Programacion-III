@@ -1,6 +1,5 @@
 const { Libros } = require('../models');
 
-// GET /api/tasks - Obtener todas las tareas
 const getAllLibros = async (req, res) => {
   try {
     const libro  = await Libros.findAll({attributes: ['id', 'nombre', 'autor', 'genero', 'estado', 'rating'], raw: true});
@@ -10,7 +9,6 @@ const getAllLibros = async (req, res) => {
   }
 };
 
-// GET /api/tasks/:id - Obtener tarea por ID
 const getLibroById = async (req, res) => {
   try {
     const { id } = req.params;
@@ -26,7 +24,6 @@ const getLibroById = async (req, res) => {
   }
 };
 
-// POST /api/tasks - Crear nueva tarea
 const createLibro = async (req, res) => {
   try {
     const { nombre, autor, genero, estado, rating } = req.body;
@@ -48,11 +45,10 @@ const createLibro = async (req, res) => {
   }
 };
 
-// PUT /api/tasks/:id - Actualizar tarea
 const updateLibro = async (req, res) => {
   try {
     const { id } = req.params;
-    const { nombre, autor, genero, estado, rating } = req.body;
+    const { estado } = req.body;
     
     const libro = await Libros.findByPk(id);
     if (!libro) {
@@ -60,11 +56,7 @@ const updateLibro = async (req, res) => {
     }
     
     const updatedLibro = await libro.update({
-      nombre, 
-      autor, 
-      genero, 
-      estado, 
-      rating
+      estado
     });
     
     res.json({
@@ -76,7 +68,6 @@ const updateLibro = async (req, res) => {
   }
 };
 
-// DELETE /api/tasks/:id - Eliminar tarea
 const deleteLibro = async (req, res) => {
   try {
     const { id } = req.params;

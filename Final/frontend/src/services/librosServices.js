@@ -14,37 +14,6 @@ export async function agregarLibro(nuevoLibro) {
   return await respuesta.json();
 }
 
-
-/*
-async function editarLibro (id, datosActualizados) {
-    try {
-        setLoading(true);
-        const respuesta = await fetch(`http://localhost:3001/libros/${id}`, {
-            method: 'PUT',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(datosActualizados),
-        });
-
-        if (!respuesta.ok) {
-            throw new Error('Error al editar el libro');
-        }
-
-        const libroEditado = await respuesta.json();
-
-        setLibros(prev =>
-            prev.map(libro => libro.id === id ? libroEditado : libro)
-        );
-
-        return libroEditado;
-    } catch (error) {
-        setError(error.message);
-    } finally {
-        setLoading(false);
-    }
-}
-
-*/
-
 export async function eliminarLibro(id) {
   const respuesta = await fetch(`http://localhost:3001/api/libro/${id}`, {
     method: 'DELETE',
@@ -56,11 +25,11 @@ export async function eliminarLibro(id) {
 }
 
 
-export async function editarLibro(id, datosActualizados) {
+export async function editarLibro(id, newEstado) {
   const respuesta = await fetch(`http://localhost:3001/api/libro/${id}`, {
     method: 'PUT',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(datosActualizados),
+    body: JSON.stringify({ estado: newEstado}),
   });
 
   if (!respuesta.ok) {

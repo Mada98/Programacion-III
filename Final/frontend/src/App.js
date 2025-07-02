@@ -35,7 +35,7 @@ function App() {
   const crearLibro = async (nuevoLibro) => {
     try {
       await agregarLibro(nuevoLibro);
-      alert("Libro agregado")
+      alert("Libro agregado, actualice la pagina para ver los resultados")
     } catch (error) {
       console.error("Error al agregar el libro:", error);
     }
@@ -44,7 +44,7 @@ function App() {
   const eliminarLibroPorId = async (id) => {
     try {
       await eliminarLibro(id);
-      alert("Libro eliminado")
+      alert("Libro eliminado, actualice la pagina para ver los resultados")
     } catch (error) {
       alert("Error al eliminar libro: " + error.message);
     }
@@ -53,7 +53,7 @@ function App() {
   const crearResena = async (nuevoResena) => {
     try {
       await agregarResena(nuevoResena);
-      alert("Reseña creada")
+      alert("Reseña creada, actualice la pagina para ver los resultados")
     } catch (error) {
       console.error("Error al realizar una reseña:", error);
     }
