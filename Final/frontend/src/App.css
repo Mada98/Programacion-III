@@ -17,3 +17,20 @@
 .App-header a {
   color: #61dafb;
 }
+
+.contenedor-tarjetas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  padding: 2rem;
+  background-color: #f4f6f8;
+}
+
+.contenedor-tarjetas h2 {
+  width: 100%;
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #333;
+}

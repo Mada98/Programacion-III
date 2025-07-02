@@ -1,4 +1,5 @@
 import { editarLibro } from "../../services/librosServices";
+import './TarjetasLibros.css'
 
 const updateLibro = async (id, newEstado) => {
     try{

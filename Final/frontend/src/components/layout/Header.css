@@ -1,28 +1,66 @@
 header {
-  background-color: #c04f03;
-  color: white;
-  padding: 20px;
-
-  display: flex;            
-  align-items: center;     
-  gap: 15px;                 
-  flex-wrap: wrap;           
+  background-color: #ffffff;
+  padding: 1.5rem 2rem;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
 
 header h1 {
+  flex: 1 1 100%;
+  font-size: 2rem;
+  color: #2c3e50;
   margin: 0;
-  font-size: 24px;
-  flex-shrink: 0;           
+  text-align: center;
 }
 
 header button {
-  padding: 8px 12px;
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 0.5rem 1.2rem;
+  border-radius: 0.5rem;
+  font-size: 1rem;
   cursor: pointer;
-  font-weight: bold;
-  flex-shrink: 0;
+  transition: background-color 0.2s ease;
+}
+
+header button:hover {
+  background-color: #c0392b;
+}
+
+header h3 {
+  margin: 0;
+  font-size: 1rem;
+  color: #34495e;
 }
 
 header select {
-  padding: 5px;
-  font-size: 14px;
+  padding: 0.4rem 0.8rem;
+  border-radius: 0.4rem;
+  border: 1px solid #ccc;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  header h1 {
+    text-align: left;
+  }
+
+  header button {
+    width: 100%;
+  }
+
+  header select {
+    width: 100%;
+  }
 }
