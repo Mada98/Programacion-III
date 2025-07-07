@@ -129,6 +129,27 @@ Una aplicación para catalogar libros personales y hacer seguimiento de lectura.
     docker-compose up -d
     ```
 ---
+### 🔧 Comandos Principales - Docker
+```bash
+# Iniciar todos los servicios
+docker-compose up
+
+# Iniciar en background
+docker-compose up -d
+
+# Ver logs en tiempo real
+docker-compose logs -f
+
+# Ver logs de un servicio específico
+docker-compose logs -f backend
+
+# Detener servicios
+docker-compose down
+
+# Detener y limpiar volúmenes
+docker-compose down -v
+```
+---
 
 ### URLs de Acceso
 - **Frontend:** http://localhost:3000
@@ -142,7 +163,7 @@ Una aplicación para catalogar libros personales y hacer seguimiento de lectura.
 
 ### ⚙️ Crear datos de Prueba
 
-1. En la terminal:
+1. En la terminal, para acceder al contenedor del backend:
     ```bash
     docker-compose exec backend sh
     ```
@@ -150,7 +171,10 @@ Una aplicación para catalogar libros personales y hacer seguimiento de lectura.
     ```bash
     npx sequelize-cli db:seed:all
     ```
-
+3. Para salir del contenedor:
+    ```bash
+    exit
+    ```
 ---
 
 ### 👥 Integrantes del Proyecto
