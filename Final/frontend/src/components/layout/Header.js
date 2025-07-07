@@ -1,7 +1,7 @@
 
 import './Header.css';
 
-function Header({onAgregarLibroClick, onAgregarResenaClick}){
+function Header({onAgregarLibroClick, onAgregarResenaClick, onFiltrarEstado, onFiltrarGenero}) {
     return(
         <header>
             
@@ -10,7 +10,7 @@ function Header({onAgregarLibroClick, onAgregarResenaClick}){
             <button onClick={onAgregarResenaClick}>Realizar Reseña</button>
 
             <h3>Filtrar libros por:</h3>
-            <select defaultValue='todos'>
+            <select defaultValue='todos' onChange={(e) => onFiltrarEstado(e.target.value)}>
                 <option value='todos'>Todos</option>
                 <option value='completado'>Completados</option>
                 <option value='abandonado'>Abandonados</option>
@@ -19,7 +19,7 @@ function Header({onAgregarLibroClick, onAgregarResenaClick}){
             </select>
 
             <h3>Filtrar por generos</h3>
-            <select defaultValue='todos'>
+            <select defaultValue='todos' onChange={(e) => onFiltrarGenero(e.target.value)}>
                 <option value='todos'>Todos</option>
                 <option value='ficcion'>Ficcion</option>
                 <option value="misterio">Misterio</option>

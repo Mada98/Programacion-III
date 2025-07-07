@@ -17,6 +17,8 @@ function App() {
   const [mostrarFormularioResena, setMostrarFormularioResena] = useState(false);
   const [libros, setLibros] = useState([]);
   const [Resenas, setResenas] = useState([])
+  const [filtroEstado, setFiltroEstado] = useState('todos');
+  const [filtroGenero, setFiltroGenero] = useState('todos');
 
   useEffect(() => {
     fetch("http://localhost:3001/api/libro")
@@ -59,11 +61,19 @@ function App() {
     }
   };
 
+  const librosFiltrados = libros.filter(libro => {
+    const coincideEstado = filtroEstado === 'todos' || libro.estado === filtroEstado;
+    const coincideGenero = filtroGenero === 'todos' || libro.genero === filtroGenero;
+    return coincideEstado && coincideGenero;
+  });
+
   return (
     <div className="App">
       <Header
         onAgregarLibroClick={() => setMostrarFormularioLibro(true)}
         onAgregarResenaClick={() => setMostrarFormularioResena(true)}
+        onFiltrarEstado={setFiltroEstado}
+        onFiltrarGenero={setFiltroGenero}
       />
 
       {mostrarFormularioLibro && (
@@ -82,7 +92,7 @@ function App() {
 
       <div className="contenedor-tarjetas">
         <h2>Libros</h2>
-        {libros.map((libro) => (
+        {librosFiltrados.map((libro) => (
           <TarjetaLibro
             key={libro.id}
             libro={libro}
