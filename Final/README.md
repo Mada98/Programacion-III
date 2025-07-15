@@ -129,6 +129,35 @@ Una aplicación para catalogar libros personales y hacer seguimiento de lectura.
     docker-compose up -d
     ```
 ---
+
+### URLs de Acceso
+- **Frontend:** http://localhost:3000
+- **Backend API - Sección Libros:** http://localhost:3001/api/libro
+- **Backend API - Sección Reseñas:** http://localhost:3001/api/resena
+- **Health Check:** http://localhost:3001/health
+- **Nginx Proxy:** http://localhost
+- **pgAdmin 4:** http://localhost:5050
+- **Base de datos:** localhost:5432
+
+---
+
+### ⚙️ Crear Datos de Prueba
+
+1. En la terminal, para acceder al contenedor del backend:
+    ```bash
+    docker-compose exec backend sh
+    ```
+2. Ejecutar el siguiente comando para crear los datos de prueba:
+    ```bash
+    npx sequelize-cli db:seed:all
+    ```
+3. Para salir del contenedor:
+    ```bash
+    exit
+    ```
+    
+---
+
 ### 🔧 Comandos Principales - Docker
 ```bash
 # Iniciar todos los servicios
@@ -149,35 +178,8 @@ docker-compose down
 # Detener y limpiar volúmenes
 docker-compose down -v
 ```
----
 
-### URLs de Acceso
-- **Frontend:** http://localhost:3000
-- **Backend API:** http://localhost:3001/api
-- **Health Check:** http://localhost:3001/health
-- **Nginx Proxy:** http://localhost
-- **pgAdmin 4:** http://localhost:5050
-- **Base de datos:** localhost:5432
-
----
-
-### ⚙️ Crear datos de Prueba
-
-1. En la terminal, para acceder al contenedor del backend:
-    ```bash
-    docker-compose exec backend sh
-    ```
-2. Ejecutar el siguiente comando para crear los datos de prueba:
-    ```bash
-    npx sequelize-cli db:seed:all
-    ```
-3. Para salir del contenedor:
-    ```bash
-    exit
-    ```
----
-
-### 👥 Integrantes del Proyecto
+## 👥 Integrantes del Proyecto
 
 + Mateo Avila Baez.
 + Ramiro Gabeiras.
